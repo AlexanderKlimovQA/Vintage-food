@@ -1,0 +1,220 @@
+/* Сброс всех отступов */
+*,
+*::after,
+*::before {
+    padding: 0;
+    margin: 0;
+}
+
+html {
+    /* При помощи свойства box-sizing можно изменить то, как браузер будет рассчитывать размеры элемента. */
+    box-sizing: content-box;
+}
+
+body {
+    font-family: 'Montserrat';
+    color: #000;
+    font-size: 20px;
+}
+
+ul {
+    /* Удаляем все стили у неупорядоченных списков (ul), к примеру маркеры точек */
+    list-style: none;
+}
+
+a {
+    /* Удаляем все декорации ссылок, к примеру нижнее подчеркивание */
+    text-decoration: none;
+    /* Цвет ссылок будет наследоваться у родительских элементов  */
+    color: inherit;
+}
+
+.container {
+    /* Устанавливает максимальную ширину элемента. Все элементы внутри него не смогут выходить за границы этого элемента и будут сужаться, либо растягиваться если менять размер этого значения */
+    max-width: 1300px;
+    /* Задаёт размер внешнего отступа вокруг элемента. Иногда внешние отступы называют полями. */
+    /* Значение auto означает, что браузер сам выбирает подходящий размер отступа. Например, можно использовать в некоторых случаях, чтобы центровать элемент. */
+    margin: 0 auto;
+    padding-right: 10px;
+    padding-left: 15px;
+}
+
+header {
+    /* Задает градиент (цвет переходит из одного в другой) */
+    background: linear-gradient(180deg, #EDA418 47.40%, rgba(237, 164, 24, 0.00) 100%);
+}
+
+nav {
+    padding-top: 105px;
+    margin-bottom: 23px;
+}
+
+.nav_menu {
+    /* Элементы блока будут распределены по горизонтальной оси */
+    display: flex;
+    /* Элементы внутри блока будут равномерно распределены, между всем пространством этого блока */
+    justify-content: space-between;
+    /* Выравнивает элементы внутри блока горизонтально или вертикали, в зависимости от расположения контента (вертикально/горизонтально) */
+    align-items: center;
+}
+
+.logo {
+    padding-top: 17px;
+}
+
+.nav_menu_list {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    /* Размер отступа от правой границы этого блока, до правой границы родительского блока */
+    margin-right: 120px;
+}
+
+.nav_menu_button {
+    /* Убирает все границы кнопки */
+    border: none;
+    /* Прозрачный цвет */
+    background-color: transparent;
+    /* При наведении на кнопку курсор становится pointer */
+    cursor: pointer;
+}
+
+.nav_menu_link {
+    color: #000;
+    /* Задает отступы между линками справа  */
+    margin-right: 100px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 25px;
+    /* Задает расстояние между строками. Стоит прописывать это значение, даже в предложениях в одну строку, так как при изменении размера окна текст будет перестраиваться вниз. */
+    line-height: normal;
+}
+
+#link1 {
+    font-weight: 700;
+}
+
+.nav_menu_link:hover {
+    color: #fff;
+}
+
+.header_inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 100px;
+}
+
+.hero_list-title {
+    font-weight: 800;
+    font-size: 32px;
+    line-height: normal;
+    padding-bottom: 29px;
+}
+
+.hero_list-text {
+    font-weight: 400;
+    font-size: 16px;
+    line-height: normal;
+    padding-bottom: 40px;
+}
+
+.hero_list-btn {
+    /* Задаем отступы от внутреннего содержимого. При использвании двух значений, первой задает отступы слева и справа, второе сверху и снизу */
+    padding: 14px 18px;
+    font-weight: 400;
+    font-size: 24px;
+    line-height: normal;
+    border: none;
+    background-color: #E52626;
+    /* Округлений краев кнопки */
+    border-radius: 50px;
+    color: #FFF;
+    cursor: pointer;
+    /* Задаем время перехода в другое состояние, в данном случае в следуюем селекторе hover */
+    transition: 0.3s ease;
+}
+
+.hero_list-btn:hover {
+    background-color: #881414;
+}
+
+.img_burger {
+    background-color: transparent;
+}
+
+.main {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding-left: 15px;
+    padding-right: 15px;
+    text-align: center;
+}
+
+.main-menu_title {
+    padding-left: 0;
+    padding-right: 0;
+    font-weight: 700;
+    font-size: 45px;
+    line-height: normal;
+    margin-bottom: 38px;
+}
+
+.main-menu_link {
+    display: inline-block;
+}
+
+.main-title {
+    transition: 0.4s ease;
+    font-size: 35px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 43px;
+    margin-bottom: 46px;
+}
+
+.main-title:hover {
+    color: hwb(41 16% 5%);
+}
+
+.main-menu_list {
+    padding: 0;
+}
+
+.main-menu_items {
+    display: grid;
+    /* указывает число (и ширину) столбцов в макете сетки. */
+    grid-template-columns: repeat(3, 1fr);
+    grid-auto-rows: auto;
+    /* определяет расстояние между столбцами в макете */
+    grid-column-gap: 38px;
+}
+
+.footer {
+    background: linear-gradient(180deg, rgba(217, 217, 217, 0.00) 0%, #EDA61D 100%);
+    background-size: cover;
+    padding: 157px 0 80px;
+    text-align: center;
+}
+
+.footer_list {
+    display: flex;
+    /* Элементы внутри блока будут равномерно распределены, между всем пространством этого блока + будет учтено такое же расстояние в начале и конце блока */
+    justify-content: space-evenly;
+    padding-bottom: 45px;
+}
+
+.footer_item:hover {
+    text-decoration: underline;
+}
+
+.footer_text {
+    font-weight: 500;
+    padding-bottom: 24px;
+}
+
+.footer-social_list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
