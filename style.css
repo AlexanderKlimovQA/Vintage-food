@@ -42,6 +42,7 @@ a {
 header {
     /* Задает градиент (цвет переходит из одного в другой) */
     background: linear-gradient(180deg, #EDA418 47.40%, rgba(237, 164, 24, 0.00) 100%);
+    min-width: 1480px;
 }
 
 nav {
@@ -149,6 +150,7 @@ nav {
     padding-left: 15px;
     padding-right: 15px;
     text-align: center;
+    min-width: 1480px;
 }
 
 .main-menu_title {
@@ -170,7 +172,6 @@ nav {
     font-style: normal;
     font-weight: 300;
     line-height: 43px;
-    margin-bottom: 46px;
 }
 
 .main-title:hover {
@@ -188,6 +189,7 @@ nav {
     grid-auto-rows: auto;
     /* определяет расстояние между столбцами в макете */
     grid-column-gap: 38px;
+    min-width: 1350px;
 }
 
 .footer {
@@ -195,6 +197,7 @@ nav {
     background-size: cover;
     padding: 157px 0 80px;
     text-align: center;
+    min-width: 1480px;
 }
 
 .footer_list {
